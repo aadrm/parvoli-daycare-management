@@ -46,15 +46,4 @@ class BabyServiceTest {
         verify(babyRepository).save(baby);
     }
 
-    @Test
-    void canCheckBabyExists() {
-        // given
-        String firstName = "first";
-        String lastName = "last";
-        LocalDate dob = LocalDate.of(2023, Month.APRIL, 12);
-        // when
-        underTest.babyExists(firstName, lastName, dob);
-        // then
-        verify(babyRepository).existsByFirstNameAndLastNameAndDob(firstName, lastName, dob);
-    }
 }

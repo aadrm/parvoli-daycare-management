@@ -22,10 +22,6 @@ public class BabyService {
     }
 
 
-    public boolean babyExists(String firstName, String lastName, LocalDate dob) {
-        return babyRepository.existsByFirstNameAndLastNameAndDob(firstName, lastName, dob);
-    }
-
     public void addBaby(Baby baby) {
         boolean babyExists = babyRepository
                 .existsByFirstNameAndLastNameAndDob(
