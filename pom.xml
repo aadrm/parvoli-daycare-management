@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>parvoli</artifactId>
+	<artifactId>parvoli-daycare-management</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>bay-b-sort</name>
 	<description>bay-b-sort</description>
@@ -84,16 +84,6 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-<!--			<plugin>-->
-<!--				<groupId>org.apache.maven.plugins</groupId>-->
-<!--				<artifactId>maven-failsafe-plugin</artifactId>-->
-<!--				<version>3.0.0-M5</version>-->
-<!--				<configuration>-->
-<!--					<systemPropertyVariables>-->
-<!--						<docker.host>tcp://172.26.116.35:2375</docker.host>-->
-<!--					</systemPropertyVariables>-->
-<!--				</configuration>-->
-<!--			</plugin>-->
 		</plugins>
 	</build>
 

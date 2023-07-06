@@ -1,4 +1,4 @@
-package com.parvoli.course;
+package com.parvoli.controller.dto;
 
 public class CourseRequestDto {
     private int minMonths;

@@ -1,5 +1,8 @@
-package com.parvoli.course;
+package com.parvoli.controller;
 
+import com.parvoli.model.Course;
+import com.parvoli.controller.dto.CourseRequestDto;
+import com.parvoli.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,7 +19,7 @@ public class CourseController {
 
     @GetMapping
     public List<Course> getCourses() {
-        return courseService.getCourses();
+        return courseService.findAllCourses();
     }
 
     @PostMapping

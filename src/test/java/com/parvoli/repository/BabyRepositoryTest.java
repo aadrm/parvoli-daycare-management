@@ -1,6 +1,8 @@
-package com.parvoli.baby;
+package com.parvoli.repository;
 
 
+import com.parvoli.model.Baby;
+import com.parvoli.repository.BabyRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
@@ -30,10 +32,10 @@ class BabyRepositoryTest {
         underTest.save(baby);
 
         // when
-        boolean expected = underTest.existsByFirstNameAndLastNameAndDob(firstName, lastName, dob);
+        boolean actual = underTest.existsByFirstNameAndLastNameAndDateOfBirth(firstName, lastName, dob);
 
         // then
-        assertThat(expected).isTrue();
+        assertThat(actual).isTrue();
     }
 
     @Test
@@ -51,9 +53,9 @@ class BabyRepositoryTest {
 
         // when
         String anotherFirstName = "Antonio";
-        boolean expected = underTest.existsByFirstNameAndLastNameAndDob(anotherFirstName, lastName, dob);
+        boolean actual = underTest.existsByFirstNameAndLastNameAndDateOfBirth(anotherFirstName, lastName, dob);
 
         // then
-        assertThat(expected).isFalse();
+        assertThat(actual).isFalse();
     }
 }

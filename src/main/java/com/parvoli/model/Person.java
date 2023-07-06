@@ -1,4 +1,4 @@
-package com.parvoli.person;
+package com.parvoli.model;
 
 import jakarta.persistence.*;
 
@@ -15,7 +15,7 @@ public abstract class Person {
     protected String lastName;
 
     @Column(nullable = false)
-    protected LocalDate dob;
+    protected LocalDate dateOfBirth;
 
     @Transient
     private String fullName;
@@ -23,13 +23,13 @@ public abstract class Person {
     @Transient
     private int age;
 
-    protected Person() {
+    public Person() {
     }
 
     public Person(String firstName, String lastName, LocalDate dob) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.dob = dob;
+        this.dateOfBirth = dob;
     }
 
     public String getFirstName() {
@@ -40,8 +40,8 @@ public abstract class Person {
         return lastName;
     }
 
-    public LocalDate getDob() {
-        return dob;
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth;
     }
 
     public String getFullName() {
@@ -50,6 +50,6 @@ public abstract class Person {
 
     public int getAge() {
         LocalDate currDate = LocalDate.now();
-        return Period.between(dob, currDate).getYears();
+        return Period.between(dateOfBirth, currDate).getYears();
     }
 }
